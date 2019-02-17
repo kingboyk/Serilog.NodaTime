@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.NodaTime", "Serilog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Serilog.NodaTime.Tests", "Serilog.NodaTime.Tests\Serilog.NodaTime.Tests.csproj", "{720F9F39-A3F9-419E-9B07-7C59CFAEF294}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.NodaTime.Example", "Serilog.NodaTime.Example\Serilog.NodaTime.Example.csproj", "{90DCF68E-2946-41CE-A6FB-4FA4D44C16FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{720F9F39-A3F9-419E-9B07-7C59CFAEF294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{720F9F39-A3F9-419E-9B07-7C59CFAEF294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{720F9F39-A3F9-419E-9B07-7C59CFAEF294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90DCF68E-2946-41CE-A6FB-4FA4D44C16FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DCF68E-2946-41CE-A6FB-4FA4D44C16FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DCF68E-2946-41CE-A6FB-4FA4D44C16FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DCF68E-2946-41CE-A6FB-4FA4D44C16FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
