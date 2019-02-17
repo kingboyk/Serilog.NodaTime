@@ -2,6 +2,10 @@
   <PropertyGroup>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
+   
+  <PropertyGroup>
+   <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
