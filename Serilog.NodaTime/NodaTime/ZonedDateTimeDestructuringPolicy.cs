@@ -10,7 +10,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class ZonedDateTimeDestructuringPolicy : DestructuringPolicyBase<ZonedDateTime>
+    internal sealed class ZonedDateTimeDestructuringPolicy : DestructuringPolicyBase<ZonedDateTime>
     {
         protected override IPattern<ZonedDateTime> Pattern { get; }
 

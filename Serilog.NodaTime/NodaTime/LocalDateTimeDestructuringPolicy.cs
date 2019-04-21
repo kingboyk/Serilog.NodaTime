@@ -7,7 +7,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class LocalDateTimeDestructuringPolicy : DestructuringPolicyBase<LocalDateTime>
+    internal sealed class LocalDateTimeDestructuringPolicy : DestructuringPolicyBase<LocalDateTime>
     {
         protected override IPattern<LocalDateTime> Pattern => LocalDateTimePattern.ExtendedIso;
 

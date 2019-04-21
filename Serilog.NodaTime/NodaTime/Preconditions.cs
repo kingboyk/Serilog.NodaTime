@@ -10,7 +10,7 @@ namespace Serilog.NodaTime
     /// <summary>
     /// Helper static methods for argument/state validation. (Just the subset used within this library.)
     /// </summary>
-    public static class Preconditions
+    internal static class Preconditions
     {
         public static T CheckNotNull<T>(T argument, string paramName) where T : class
             => argument ?? throw new ArgumentNullException(paramName);

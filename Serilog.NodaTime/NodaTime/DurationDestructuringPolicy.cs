@@ -7,7 +7,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class DurationDestructuringPolicy : DestructuringPolicyBase<Duration>
+    internal sealed class DurationDestructuringPolicy : DestructuringPolicyBase<Duration>
     {
         protected override IPattern<Duration> Pattern => DurationPattern.CreateWithInvariantCulture("-H:mm:ss.FFFFFFFFF");
     }

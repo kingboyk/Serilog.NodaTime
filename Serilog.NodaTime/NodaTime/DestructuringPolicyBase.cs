@@ -13,7 +13,7 @@ using Serilog.Events;
 
 namespace Serilog.NodaTime
 {
-    public abstract class DestructuringPolicyBase<T> : IDestructuringPolicy
+    internal abstract class DestructuringPolicyBase<T> : IDestructuringPolicy
     {
         protected abstract IPattern<T> Pattern { get; }
         protected readonly Action<T> Validator;

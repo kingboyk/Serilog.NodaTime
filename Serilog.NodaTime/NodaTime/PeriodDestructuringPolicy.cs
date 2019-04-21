@@ -7,7 +7,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class PeriodDestructuringPolicy : DestructuringPolicyBase<Period>
+    internal sealed class PeriodDestructuringPolicy : DestructuringPolicyBase<Period>
     {
         protected override IPattern<Period> Pattern => PeriodPattern.Roundtrip;
     }

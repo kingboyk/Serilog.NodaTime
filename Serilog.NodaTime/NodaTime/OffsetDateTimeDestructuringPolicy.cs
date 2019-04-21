@@ -7,7 +7,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class OffsetDateTimeDestructuringPolicy : DestructuringPolicyBase<OffsetDateTime>
+    internal sealed class OffsetDateTimeDestructuringPolicy : DestructuringPolicyBase<OffsetDateTime>
     {
         protected override IPattern<OffsetDateTime> Pattern => OffsetDateTimePattern.Rfc3339;
 

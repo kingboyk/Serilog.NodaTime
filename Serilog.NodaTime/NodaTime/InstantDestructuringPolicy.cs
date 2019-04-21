@@ -7,7 +7,7 @@ using NodaTime.Text;
 
 namespace Serilog.NodaTime
 {
-    public sealed class InstantDestructuringPolicy : DestructuringPolicyBase<Instant>
+    internal sealed class InstantDestructuringPolicy : DestructuringPolicyBase<Instant>
     {
         protected override IPattern<Instant> Pattern => InstantPattern.General;
     }

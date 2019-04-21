@@ -8,7 +8,7 @@ using Serilog.Events;
 
 namespace Serilog.NodaTime
 {
-    public sealed class IntervalDestructuringPolicy : IDestructuringPolicy
+    internal sealed class IntervalDestructuringPolicy : IDestructuringPolicy
     {
         public bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
         {
