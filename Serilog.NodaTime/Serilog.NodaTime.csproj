@@ -9,7 +9,7 @@
     <Authors>Stephen Kennedy &amp; The Noda Time Authors</Authors>
     <Owners>Stephen Kennedy</Owners>
     <Company>SDK Software</Company>
-    <Description>Adds support to Serilog for destructuring NodaTime types</Description>
+    <Description>Adds support for logging NodaTime types with Serilog</Description>
     <Copyright>(c) 2019 Stephen Kennedy</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl />
