@@ -4,8 +4,6 @@
 Adds support to Serilog for destructuring NodaTime types
 
 # Usage
-Reference the `Serilog.NodaTime` package or project, and add `using Serilog.NodaTime` to your .cs file.
-
 Configure Serilog to support NodaTime types by calling `.ConfigureForNodaTime` on the `LoggerConfiguration` instance:
 
 `.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb)`

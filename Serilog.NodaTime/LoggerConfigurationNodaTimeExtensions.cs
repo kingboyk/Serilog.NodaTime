@@ -4,15 +4,17 @@
 
 // Contains code from NodaTime.Serialization.JsonNet
 // Copyright 2012 The Noda Time Authors.
+
 using System;
 using NodaTime;
+using Serilog.NodaTime;
 
-namespace Serilog.NodaTime
+namespace Serilog
 {
     /// <summary>
     /// Static class containing extension methods to configure Serilog for Noda Time types.
     /// </summary>
-    public static class Extensions
+    public static class LoggerConfigurationNodaTimeExtensions
     {
         /// <summary>
         /// Configures Serilog with everything required to properly destructure NodaTime data types.
