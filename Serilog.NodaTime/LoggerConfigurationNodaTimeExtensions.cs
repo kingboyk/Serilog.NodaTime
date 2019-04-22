@@ -22,6 +22,7 @@ namespace Serilog
         /// </summary>
         /// <param name="lc">The logger configuration.</param>
         /// <param name="provider">The time zone provider to use when parsing time zones and zoned date/times.</param>
+        /// <remarks>Destructuring policies are only applied when an object is logged with destructuring.</remarks>
         /// <returns>Configuration object allowing method chaining.</returns>
         public static LoggerConfiguration ConfigureForNodaTime(this LoggerConfiguration lc, IDateTimeZoneProvider provider)
         {

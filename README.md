@@ -16,4 +16,4 @@ For example:
                     .CreateLogger();
 
 # Usage
-Please refer to the [example program](https://github.com/kingboyk/Serilog.NodaTime/blob/master/Serilog.NodaTime.Example/Program.cs).
+Please refer to the [example program](https://github.com/kingboyk/Serilog.NodaTime/blob/master/Serilog.NodaTime.Example/Examples.cs).
