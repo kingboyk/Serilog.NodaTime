@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/7hn6lvwv1ikxsxrn/branch/master?svg=true)](https://ci.appveyor.com/project/kingboyk/serilog-nodatime/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/7hn6lvwv1ikxsxrn/branch/master?svg=true)](https://ci.appveyor.com/project/kingboyk/serilog-nodatime/branch/master) ![Nuget](https://img.shields.io/nuget/v/Serilog.NodaTime.svg)
 
 # Serilog.NodaTime
 Adds support for logging [NodaTime](https://github.com/nodatime/nodatime) types with [Serilog](https://github.com/serilog/serilog).
