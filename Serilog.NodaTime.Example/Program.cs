@@ -3,6 +3,7 @@
 // as found in the LICENSE file.
 
 using System;
+using System.Linq;
 using System.Reflection;
 using Oakton;
 
@@ -12,20 +13,16 @@ namespace Serilog.NodaTime.Example
     {
         private static int Main(string[] args)
         {
-            while (true)
+            if (args.Any() && args[0] == "--help")
             {
-                if (args.Length == 1 && args[0].Trim() == "--help")
-                {
-                    args = new[] { "help" };
-                    continue;
-                }
-
-                return CommandExecutor.For(_ =>
-                {
-                    _.RegisterCommands(typeof(Program).GetTypeInfo().Assembly);
-                    _.DefaultCommand = typeof(InteractiveCommand);
-                }).Execute(args);
+                args[0] = "help";
             }
+
+            return CommandExecutor.For(_ =>
+            {
+                _.RegisterCommands(typeof(Program).GetTypeInfo().Assembly);
+                _.DefaultCommand = typeof(InteractiveCommand);
+            }).Execute(args);
         }
     }
 

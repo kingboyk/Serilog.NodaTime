@@ -29,7 +29,9 @@ namespace Serilog.NodaTime.Example
             logger.WithCurrentInstant().Information("LocalDate {@LocalDate}", localDateTime.Date);
             logger.WithCurrentInstant().Information("LocalDateTime {@LocalDateTime}", localDateTime);
             logger.WithCurrentInstant().Information("LocalTime {@LocalTime}", localDateTime.TimeOfDay);
+            logger.WithCurrentInstant().Information("OffsetDate {@OffsetDate}", new OffsetDate(localDateTime.Date, Offset.FromHours(10)));
             logger.WithCurrentInstant().Information("OffsetDateTime {@OffsetDateTime}", new OffsetDateTime(localDateTime, Offset.FromHours(10)));
+            logger.WithCurrentInstant().Information("OffsetTime {@OffsetTime}", new OffsetTime(localDateTime.TimeOfDay, Offset.FromHours(10)));
             logger.WithCurrentInstant().Information("Period {@Period}", Period.FromNanoseconds(1234567890));
             logger.WithCurrentInstant().Information("ZonedDateTime {@ZonedDateTime}", localDateTime.InZoneLeniently(DateTimeZoneProviders.Tzdb["Australia/Canberra"]));
 
