@@ -38,7 +38,9 @@ namespace Serilog
                 .Destructure.WithLocalDateTime()
                 .Destructure.WithLocalDate()
                 .Destructure.WithLocalTime()
+                .Destructure.WithOffsetDate()
                 .Destructure.WithOffsetDateTime()
+                .Destructure.WithOffsetTime()
                 .Destructure.WithDateTimeZone()
                 .Destructure.WithZonedDateTime(provider)
                 .Destructure.WithDuration()
@@ -83,10 +85,22 @@ namespace Serilog
         public static LoggerConfiguration WithLocalTime(this LoggerDestructuringConfiguration ldc) => ldc.With<LocalTimeDestructuringPolicy>();
 
         /// <summary>
+        /// Adds support for logging instances of NodaTime.OffsetDate
+        /// </summary>
+        /// <remarks>Deserialisation: OffsetDatePattern.GeneralIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
+        public static LoggerConfiguration WithOffsetDate(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetDateDestructuringPolicy>();
+
+        /// <summary>
         /// Adds support for logging instances of NodaTime.OffsetDateTime
         /// </summary>
         /// <remarks>Deserialisation: OffsetDateTimePattern.Rfc3339.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
         public static LoggerConfiguration WithOffsetDateTime(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetDateTimeDestructuringPolicy>();
+
+        /// <summary>
+        /// Adds support for logging instances of NodaTime.OffsetTime
+        /// </summary>
+        /// <remarks>Deserialisation: OffsetTimePattern.ExtendedIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
+        public static LoggerConfiguration WithOffsetTime(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetTimeDestructuringPolicy>();
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.DateTimeZone

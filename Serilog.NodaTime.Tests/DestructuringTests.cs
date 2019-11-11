@@ -95,6 +95,18 @@ namespace Serilog.NodaTime.Tests
         }
 
         [Test]
+        public void OffsetDateRoundTripTest()
+        {
+            RoundTripTest(new OffsetDate(new LocalDate(2018, 12, 11), Offset.FromHoursAndMinutes(1, 2)));
+        }
+
+        [Test]
+        public void NullableOffsetDateRoundTripTest()
+        {
+            RoundTripTest((OffsetDate?)new OffsetDate(new LocalDate(2018, 12, 11), Offset.FromHoursAndMinutes(1, 2)));
+        }
+
+        [Test]
         public void OffsetDateTimeRoundTripTest()
         {
             RoundTripTest(new OffsetDateTime(new LocalDateTime(2018, 12, 11, 10, 9, 8), Offset.FromHoursAndMinutes(1, 2)));
@@ -104,6 +116,18 @@ namespace Serilog.NodaTime.Tests
         public void NullableOffsetDateTimeRoundTripTest()
         {
             RoundTripTest((OffsetDateTime?)new OffsetDateTime(new LocalDateTime(2018, 12, 11, 10, 9, 8), Offset.FromHoursAndMinutes(1, 2)));
+        }
+
+        [Test]
+        public void OffsetTimeRoundTripTest()
+        {
+            RoundTripTest(new OffsetTime(new LocalTime(10, 9, 8), Offset.FromHoursAndMinutes(1, 2)));
+        }
+
+        [Test]
+        public void NullableOffsetTimeRoundTripTest()
+        {
+            RoundTripTest((OffsetTime?)new OffsetTime(new LocalTime(10, 9, 8), Offset.FromHoursAndMinutes(1, 2)));
         }
 
         [Test]
