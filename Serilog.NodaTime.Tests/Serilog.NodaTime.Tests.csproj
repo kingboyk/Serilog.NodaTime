@@ -4,8 +4,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Nullable>enable</Nullable>
     <Authors>Stephen Kennedy &amp; The Noda Time Authors</Authors>
     <Owners>Stephen Kennedy</Owners>
     <Company>SDK Software</Company>
@@ -32,5 +32,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Serilog.NodaTime\Serilog.NodaTime.csproj" />
   </ItemGroup>
-
 </Project>

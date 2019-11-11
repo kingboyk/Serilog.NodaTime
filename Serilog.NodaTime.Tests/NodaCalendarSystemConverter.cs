@@ -5,6 +5,7 @@
 // Contains code from NodaTime.Serialization.JsonNet
 // Copyright 2012 The Noda Time Authors.
 
+using System;
 using Newtonsoft.Json;
 using NodaTime;
 using NodaTime.Serialization.JsonNet;
@@ -28,8 +29,8 @@ namespace Serilog.NodaTime.Tests
                 "Unexpected token parsing instant. Expected String, got {0}.",
                 reader.TokenType);
 
-            var calendarSystemId = reader.Value.ToString();
-            return CalendarSystem.ForId(calendarSystemId);
+            string? calendarSystemId = reader.Value?.ToString();
+            return CalendarSystem.ForId(calendarSystemId!); // NodaTime will throw an `ArgumentNullException(paramName)` so there is no need for us to check if null too
         }
 
         /// <summary>

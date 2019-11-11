@@ -5,7 +5,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
     <Authors>Stephen Kennedy &amp; The Noda Time Authors</Authors>
     <Owners>Stephen Kennedy</Owners>
     <Company>SDK Software</Company>
@@ -16,7 +17,7 @@
     <RepositoryUrl>https://github.com/kingboyk/Serilog.NodaTime/</RepositoryUrl>
     <AssemblyName>Serilog.NodaTime</AssemblyName>
     <RootNamespace>Serilog</RootNamespace>
-    <Version>3.0.0-alpha</Version>
+    <Version>3.0.0-beta01</Version>
   </PropertyGroup>
 
   <ItemGroup>
