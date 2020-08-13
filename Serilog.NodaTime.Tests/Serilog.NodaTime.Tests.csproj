@@ -4,7 +4,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <Authors>Stephen Kennedy &amp; The Noda Time Authors</Authors>
     <Owners>Stephen Kennedy</Owners>
