@@ -16,14 +16,14 @@ namespace Serilog.NodaTime
     internal abstract class DestructuringPolicyBase<T> : IDestructuringPolicy
     {
         protected abstract IPattern<T> Pattern { get; }
-        protected readonly Action<T> Validator;
+        protected readonly Action<T>? Validator;
 
-        protected DestructuringPolicyBase(Action<T> validator = null)
+        protected DestructuringPolicyBase(Action<T>? validator = null)
         {
             Validator = validator;
         }
 
-        public virtual bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue result)
+        public virtual bool TryDestructure(object value, ILogEventPropertyValueFactory propertyValueFactory, out LogEventPropertyValue? result)
         {
             if (value is T t)
             {

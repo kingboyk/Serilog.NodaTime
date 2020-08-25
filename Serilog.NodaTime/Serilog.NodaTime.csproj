@@ -4,23 +4,24 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net45;netstandard1.3;netstandard2.0</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
     <Authors>Stephen Kennedy &amp; The Noda Time Authors</Authors>
     <Owners>Stephen Kennedy</Owners>
     <Company>SDK Software</Company>
     <Description>Adds support for logging NodaTime types with Serilog</Description>
-    <Copyright>(c) 2019 Stephen Kennedy</Copyright>
+    <Copyright>(c) 2020 Stephen Kennedy</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl />
     <RepositoryUrl>https://github.com/kingboyk/Serilog.NodaTime/</RepositoryUrl>
     <AssemblyName>Serilog.NodaTime</AssemblyName>
     <RootNamespace>Serilog</RootNamespace>
-    <Version>2.0.0</Version>
+    <Version>3.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NodaTime" Version="[2.3,3.0)" />
+    <PackageReference Include="NodaTime" Version="3.*" />
     <PackageReference Include="Serilog" Version="2.*" />
   </ItemGroup>
 </Project>

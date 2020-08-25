@@ -12,10 +12,7 @@ namespace Serilog.NodaTime
     /// </summary>
     internal static class Preconditions
     {
-        public static T CheckNotNull<T>(T argument, string paramName) where T : class
-            => argument ?? throw new ArgumentNullException(paramName);
-
-        public static void CheckArgument(bool expression, string parameter, string message)
+        public static void CheckArgument(bool expression, string? parameter, string? message)
         {
             if (!expression)
             {
