@@ -18,7 +18,7 @@ namespace Serilog.NodaTime.Tests
     [TestFixture]
     public class DestructuringTests
     {
-        private JsonSerializerSettings _jsonSerializerSettings;
+        private JsonSerializerSettings? _jsonSerializerSettings;
 
         [OneTimeSetUp]
         public void Setup()
@@ -227,11 +227,11 @@ namespace Serilog.NodaTime.Tests
 
                 var reader = new StringReader(writer.ToString());
 
-                var jsonReader = new LogEventReader(reader);
+                using var jsonReader = new LogEventReader(reader);
                 jsonReader.TryRead(out var deserialisedEvent);
                 string objJson = deserialisedEvent.Properties["Obj"].ToString();
 
-                var deserialisedObj = JsonConvert.DeserializeObject<T>(objJson, _jsonSerializerSettings);
+                var deserialisedObj = JsonConvert.DeserializeObject<T>(objJson, _jsonSerializerSettings!);
                 deserialisedObj.Should().BeEquivalentTo(obj, "of round trip");
             }
         }

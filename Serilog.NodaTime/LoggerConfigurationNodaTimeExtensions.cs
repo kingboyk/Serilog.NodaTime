@@ -52,84 +52,140 @@ namespace Serilog
         /// Adds support for logging instances of NodaTime.Instant
         /// </summary>
         /// <remarks>Deserialisation: InstantPattern.General.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithInstant(this LoggerDestructuringConfiguration ldc) => ldc.With<InstantDestructuringPolicy>();
+        public static LoggerConfiguration WithInstant(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<InstantDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.Offset
         /// </summary>
         /// <remarks>Deserialisation: OffsetPattern.GeneralInvariant.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithOffset(this LoggerDestructuringConfiguration ldc) => ldc.AsScalar<Offset>();
+        public static LoggerConfiguration WithOffset(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.AsScalar<Offset>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.CalendarSystem
         /// </summary>
         /// <remarks>Deserialisation: CalendarSystem.ForId(str)</remarks>
-        public static LoggerConfiguration WithCalendarSystem(this LoggerDestructuringConfiguration ldc) => ldc.AsScalar<CalendarSystem>();
+        public static LoggerConfiguration WithCalendarSystem(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.AsScalar<CalendarSystem>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.LocalDateTime
         /// </summary>
         /// <remarks>Deserialisation: LocalDateTimePattern.ExtendedIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithLocalDateTime(this LoggerDestructuringConfiguration ldc) => ldc.With<LocalDateTimeDestructuringPolicy>();
+        public static LoggerConfiguration WithLocalDateTime(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<LocalDateTimeDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.LocalDate
         /// </summary>
         /// <remarks>Deserialisation: LocalDatePattern.Iso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithLocalDate(this LoggerDestructuringConfiguration ldc) => ldc.With<LocalDateDestructuringPolicy>();
+        public static LoggerConfiguration WithLocalDate(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<LocalDateDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.LocalTime
         /// </summary>
         /// <remarks>Deserialisation: LocalTimePattern.ExtendedIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithLocalTime(this LoggerDestructuringConfiguration ldc) => ldc.With<LocalTimeDestructuringPolicy>();
+        public static LoggerConfiguration WithLocalTime(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<LocalTimeDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.OffsetDate
         /// </summary>
         /// <remarks>Deserialisation: OffsetDatePattern.GeneralIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithOffsetDate(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetDateDestructuringPolicy>();
+        public static LoggerConfiguration WithOffsetDate(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<OffsetDateDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.OffsetDateTime
         /// </summary>
         /// <remarks>Deserialisation: OffsetDateTimePattern.Rfc3339.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithOffsetDateTime(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetDateTimeDestructuringPolicy>();
+        public static LoggerConfiguration WithOffsetDateTime(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<OffsetDateTimeDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.OffsetTime
         /// </summary>
         /// <remarks>Deserialisation: OffsetTimePattern.ExtendedIso.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithOffsetTime(this LoggerDestructuringConfiguration ldc) => ldc.With<OffsetTimeDestructuringPolicy>();
+        public static LoggerConfiguration WithOffsetTime(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<OffsetTimeDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.DateTimeZone
         /// </summary>
         /// <remarks>Deserialisation: Use IDateTimeZoneProvider or NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithDateTimeZone(this LoggerDestructuringConfiguration ldc) => ldc.With<DateTimeZoneDestructuringPolicy>();
+        public static LoggerConfiguration WithDateTimeZone(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<DateTimeZoneDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.ZonedDateTime
         /// </summary>
         /// <remarks>Deserialisation: Use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithZonedDateTime(this LoggerDestructuringConfiguration ldc, IDateTimeZoneProvider provider) => ldc.With(new ZonedDateTimeDestructuringPolicy(provider));
+        public static LoggerConfiguration WithZonedDateTime(this LoggerDestructuringConfiguration ldc, IDateTimeZoneProvider provider)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With(new ZonedDateTimeDestructuringPolicy(provider));
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.Duration
         /// </summary>
         /// <remarks>Deserialisation: Use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithDuration(this LoggerDestructuringConfiguration ldc) => ldc.With<DurationDestructuringPolicy>();
+        public static LoggerConfiguration WithDuration(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<DurationDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.Period
         /// </summary>
         /// <remarks>Deserialisation: PeriodPattern.Roundtrip.Parse(str) or use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithPeriod(this LoggerDestructuringConfiguration ldc) => ldc.With<PeriodDestructuringPolicy>();
+        public static LoggerConfiguration WithPeriod(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<PeriodDestructuringPolicy>();
+        }
 
         /// <summary>
         /// Adds support for logging instances of NodaTime.Interval
         /// </summary>
         /// <remarks>Deserialisation: Use NodaTime.Serialization.JsonNet</remarks>
-        public static LoggerConfiguration WithInterval(this LoggerDestructuringConfiguration ldc) => ldc.With<IntervalDestructuringPolicy>();
+        public static LoggerConfiguration WithInterval(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<IntervalDestructuringPolicy>();
+        }
     }
 }
