@@ -81,6 +81,18 @@ namespace Serilog.NodaTime.Tests
         {
             RoundTripTest((LocalDate?)new LocalDate(2018, 12, 11));
         }
+        
+        [Test]
+        public void YearMonthRoundTripTest()
+        {
+            RoundTripTest(new YearMonth(2018, 12));
+        }
+
+        [Test]
+        public void NullableYearMonthRoundTripTest()
+        {
+            RoundTripTest((YearMonth?)new YearMonth(2018, 12));
+        }
 
         [Test]
         public void LocalTimeRoundTripTest()
