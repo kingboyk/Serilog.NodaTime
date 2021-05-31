@@ -45,7 +45,8 @@ namespace Serilog
                 .Destructure.WithZonedDateTime(provider)
                 .Destructure.WithDuration()
                 .Destructure.WithPeriod()
-                .Destructure.WithInterval();
+                .Destructure.WithInterval()
+                .Destructure.WithYearMonth();
         }
 
         /// <summary>
@@ -186,6 +187,12 @@ namespace Serilog
         {
             if (ldc == null) throw new ArgumentNullException(nameof(ldc));
             return ldc.With<IntervalDestructuringPolicy>();
+        }
+
+        public static LoggerConfiguration WithYearMonth(this LoggerDestructuringConfiguration ldc)
+        {
+            if (ldc == null) throw new ArgumentNullException(nameof(ldc));
+            return ldc.With<YearMonthDestructuringPolicy>();
         }
     }
 }

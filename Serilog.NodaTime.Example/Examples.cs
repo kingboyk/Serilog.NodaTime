@@ -26,6 +26,7 @@ namespace Serilog.NodaTime.Example
             logger.WithCurrentInstant().Information("DateTimeZone {@DateTimeZone}", DateTimeZoneProviders.Tzdb["Europe/London"]);
             logger.WithCurrentInstant().Information("Duration {@Duration}", Duration.FromMinutes(69));
             logger.WithCurrentInstant().Information("Interval {@Interval}", new Interval(start: Instant.FromJulianDate(0), end: Instant.FromUnixTimeMilliseconds(0)));
+            logger.WithCurrentInstant().Information("YearMonth {@YearMonth}", localDateTime.Date.ToYearMonth());
             logger.WithCurrentInstant().Information("LocalDate {@LocalDate}", localDateTime.Date);
             logger.WithCurrentInstant().Information("LocalDateTime {@LocalDateTime}", localDateTime);
             logger.WithCurrentInstant().Information("LocalTime {@LocalTime}", localDateTime.TimeOfDay);
